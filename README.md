@@ -1,4 +1,4 @@
-#### Docker
+## Docker
 
 - `$ sudo service docker start` --- _inicia o serviço docker_
 - `$ docker-compose up -d` --- _sobe a aplicação_
