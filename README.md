@@ -14,3 +14,7 @@
 - `$ docker rmi _IMAGE ID -f` --- _força remover imagem_
 - `$ docker rm $(docker ps -a -q) `--- _finaliza todos os containeres_
 - `$ docker rmi $(docker images -q) `--- _finaliza todas as imagens_
+
+#### Para iniciar automaticamente o Docker e o Containerd na inicialização de outras distribuições, use os comandos abaixo:
+- `$ sudo systemctl enable docker.service` --- _habilita serviço docker_
+- `$ sudo systemctl enable containerd.service` --- _habilita serviço containerd_
