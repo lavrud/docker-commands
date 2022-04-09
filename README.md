@@ -1,5 +1,6 @@
 ## Docker
 
+#### Alguns comandos básicos:
 - `$ sudo service docker start` --- _inicia o serviço docker_
 - `$ docker-compose up -d` --- _sobe a aplicação_
 - `$ docker-compose down` --- _derruba a aplicação_
