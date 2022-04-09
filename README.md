@@ -18,3 +18,8 @@
 #### Para iniciar automaticamente o Docker e o Containerd na inicialização de outras distribuições, use os comandos abaixo:
 - `$ sudo systemctl enable docker.service` --- _habilita serviço docker_
 - `$ sudo systemctl enable containerd.service` --- _habilita serviço containerd_
+
+#### Dando permissão ao usuário para ler e gravar ao docker:
+- `$ sudo newgroup docker` --- _Novo grupo Docker_
+- `$ sudo chmod 666 /var/run/docker.sock` --- _Permissão de leitura e gravação_
+- `$ sudo usermod -aG docker ${USER}` --- _Inserindo usuário ao grupo_
