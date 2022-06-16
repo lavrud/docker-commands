@@ -1,4 +1,4 @@
-## Docker
+## Docker WSL2
 
 #### Alguns comandos básicos:
 - `$ sudo service docker start` --- _inicia o serviço docker_
@@ -17,10 +17,12 @@
 - `$ docker rmi $(docker images -q) `--- _remove todas as imagens_
 
 #### Para iniciar automaticamente o Docker e o Containerd na inicialização de outras distribuições, use os comandos abaixo:
-- `$ sudo systemctl enable docker.service` --- _habilita serviço docker_
-- `$ sudo systemctl enable containerd.service` --- _habilita serviço containerd_
+- `$ sudo service enable docker.service` --- _habilita serviço docker_
+- `$ sudo service enable containerd.service` --- _habilita serviço containerd_
 
 #### Dando permissão ao usuário para ler e gravar ao docker:
 - `$ sudo newgroup docker` --- _Novo grupo Docker_
+- `$ sudo groupadd docker` --- _Adiciona && Verifica grupo Docker_
+- `$ sudo usermod -aG docker $USER` --- _Inserindo usuário ao grupo_
+- `$ sudo chown -R $USER:$USER .` --- _Fornecendo permissões ao usuário
 - `$ sudo chmod 666 /var/run/docker.sock` --- _Permissão de leitura e gravação_
-- `$ sudo usermod -aG docker ${USER}` --- _Inserindo usuário ao grupo_
