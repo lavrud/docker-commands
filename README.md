@@ -2,6 +2,7 @@
 
 #### Alguns comandos básicos:
 - `$ sudo service docker start` --- _inicia o serviço docker_
+- `$ sudo service docker status` --- _verifica o status do serviço docker_
 - `$ docker-compose up -d` --- _sobe a aplicação_
 - `$ docker-compose down` --- _derruba a aplicação_
 - `$ docker ps` --- _exibe containeres em execução_
