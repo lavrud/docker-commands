@@ -16,6 +16,7 @@
 - `$ docker rmi _IMAGE ID -f` --- _força remover imagem_
 - `$ docker rm $(docker ps -a -q) `--- _remove todos os containeres_
 - `$ docker rmi $(docker images -q) `--- _remove todas as imagens_
+- `$ docker exec -it _CONTAINER ID `--- _inicia um terminal Bash dentro de um container _
 
 #### Para iniciar automaticamente o Docker e o Containerd na inicialização de outras distribuições, use os comandos abaixo:
 - `$ sudo service enable docker.service` --- _habilita serviço docker_
