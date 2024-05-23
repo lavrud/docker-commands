@@ -20,7 +20,8 @@
 - `$ docker rmi _IMAGE_ID_ -f` --- _Força a remoção de uma imagem._
 - `$ docker rm $(docker ps -a -q)` --- _Remove todos os containers._
 - `$ docker rmi $(docker images -q)` --- _Remove todas as imagens._
-- `$ docker exec -it _CONTAINER_ID_ bash` --- _Inicia um terminal Bash dentro de um container._
+- `$ docker exec -it _CONTAINER_ID_ bash` --- _Inicia um terminal Bash dentro de um container pelo ID._
+- `$ docker exec -it _CONTAINER_NAME_ bash` --- _Inicia um terminal Bash dentro de um container pelo nome._
 
 ### Para iniciar automaticamente o Docker e o Containerd na inicialização de outras distribuições, use os comandos abaixo:
 
@@ -34,4 +35,5 @@
 - `$ newgrp docker` --- _Atualiza o grupo do usuário para Docker._
 - `$ sudo chown -R $USER:$USER .` --- _Fornece permissões ao usuário para o diretório atual._
 - `$ sudo chmod 666 /var/run/docker.sock` --- _Permissão de leitura e gravação no socket Docker._
+
 
