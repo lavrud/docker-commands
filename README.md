@@ -13,9 +13,9 @@
 - `$ docker ps` --- _Exibe os containers em execução._
 - `$ docker images` --- _Exibe as imagens Docker._
 - `$ docker container list -a` --- _Lista todos os containers, incluindo os desligados._
-- `$ docker stop CONTAINER_ID` --- _Interrompe um container em execução._
+- `$ docker stop CONTAINER_ID_||_CONTAINER_NAME` --- _Interrompe um container em execução._
+- `$ docker rm CONTAINER_ID_||_CONTAINER_NAME` --- _Remove um container._
 - `$ docker kill $(docker ps -q)` --- _Para todos os containers em execução._
-- `$ docker rm CONTAINER_ID` --- _Remove um container._
 - `$ docker rmi IMAGE_ID` --- _Remove uma imagem._
 - `$ docker rmi IMAGE_ID -f` --- _Força a remoção de uma imagem._
 - `$ docker rm $(docker ps -a -q)` --- _Remove todos os containers._
