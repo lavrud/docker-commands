@@ -1,33 +1,37 @@
 <img height="100em" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/1280px-Docker_%28container_engine%29_logo.svg.png" >
 
-## Docker commands:
+## Docker commands
 
-#### Alguns comandos básicos:
-- `$ sudo service docker start` --- _inicia o serviço docker_
-- `$ sudo service docker status` --- _verifica o status do serviço docker_
-- `$ docker-compose up -d` --- _sobe a aplicação_
-- `$ docker-compose down` --- _derruba a aplicação_
-- `$ docker-compose stop` --- _interrompe todos containeres em execução sem remover_
-- `$ docker-composer exec _CONTAINER NAME_ sh `--- _acessa o container dentro do docker_
-- `$ docker ps` --- _exibe containeres em execução_
-- `$ docker images` --- _exibe imagens em execução_
-- `$ docker container list -a` --- _lista todos os containeres, inclusive os desligados_
-- `$ docker stop _CONTAINER ID_` --- _interrompe um container em execução_
-- `$ docker kill $(docker ps -q) `--- _para todos os containers e imagens_
-- `$ docker rm _CONTAINER ID_` --- _remove container_
-- `$ docker rmi _IMAGE ID_` --- _remove imagem_
-- `$ docker rmi _IMAGE ID_ -f` --- _força remover imagem_
-- `$ docker rm $(docker ps -a -q) `--- _remove todos os containeres_
-- `$ docker rmi $(docker images -q) `--- _remove todas as imagens_
-- `$ docker exec -it _CONTAINER ID_ `--- _inicia um terminal Bash dentro de um container_
+### Alguns comandos básicos:
 
-#### Para iniciar automaticamente o Docker e o Containerd na inicialização de outras distribuições, use os comandos abaixo:
-- `$ sudo service enable docker.service` --- _habilita serviço docker_
-- `$ sudo service enable containerd.service` --- _habilita serviço containerd_
+- `$ sudo service docker start` --- _Inicia o serviço Docker._
+- `$ sudo service docker status` --- _Verifica o status do serviço Docker._
+- `$ docker-compose up -d` --- _Inicia a aplicação em segundo plano._
+- `$ docker-compose down` --- _Para e remove os containers da aplicação._
+- `$ docker-compose stop` --- _Interrompe todos os containers em execução sem removê-los._
+- `$ docker-compose exec _CONTAINER_NAME_ sh` --- _Acessa o container dentro do Docker._
+- `$ docker ps` --- _Exibe os containers em execução._
+- `$ docker images` --- _Exibe as imagens Docker._
+- `$ docker container list -a` --- _Lista todos os containers, incluindo os desligados._
+- `$ docker stop _CONTAINER_ID_` --- _Interrompe um container em execução._
+- `$ docker kill $(docker ps -q)` --- _Para todos os containers em execução._
+- `$ docker rm _CONTAINER_ID_` --- _Remove um container._
+- `$ docker rmi _IMAGE_ID_` --- _Remove uma imagem._
+- `$ docker rmi _IMAGE_ID_ -f` --- _Força a remoção de uma imagem._
+- `$ docker rm $(docker ps -a -q)` --- _Remove todos os containers._
+- `$ docker rmi $(docker images -q)` --- _Remove todas as imagens._
+- `$ docker exec -it _CONTAINER_ID_ bash` --- _Inicia um terminal Bash dentro de um container._
 
-#### Dando permissão ao usuário para ler e gravar ao docker:
-- `$ sudo newgroup docker` --- _Novo grupo Docker_
-- `$ sudo groupadd docker` --- _Adiciona && Verifica grupo Docker_
-- `$ sudo usermod -aG docker $USER` --- _Inserindo usuário ao grupo_
-- `$ sudo chown -R $USER:$USER .` --- _Fornecendo permissões ao usuário
-- `$ sudo chmod 666 /var/run/docker.sock` --- _Permissão de leitura e gravação_
+### Para iniciar automaticamente o Docker e o Containerd na inicialização de outras distribuições, use os comandos abaixo:
+
+- `$ sudo systemctl enable docker.service` --- _Habilita o serviço Docker para iniciar automaticamente._
+- `$ sudo systemctl enable containerd.service` --- _Habilita o serviço Containerd para iniciar automaticamente._
+
+### Dando permissão ao usuário para ler e gravar ao Docker:
+
+- `$ sudo groupadd docker` --- _Adiciona e verifica o grupo Docker._
+- `$ sudo usermod -aG docker $USER` --- _Adiciona o usuário ao grupo Docker._
+- `$ newgrp docker` --- _Atualiza o grupo do usuário para Docker._
+- `$ sudo chown -R $USER:$USER .` --- _Fornece permissões ao usuário para o diretório atual._
+- `$ sudo chmod 666 /var/run/docker.sock` --- _Permissão de leitura e gravação no socket Docker._
+
