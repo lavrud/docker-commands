@@ -20,6 +20,7 @@
 
 - `$ docker ps` --- _Exibe os containers em execução._
 - `$ docker container list -a` --- _Lista todos os containers, incluindo os desligados._
+- `$ docker start CONTAINER_ID_||_CONTAINER_NAME` --- _Inicia um container._
 - `$ docker run -d IMAGE_NAME` --- _Inicia um container em segundo plano._
 - `$ docker run -it IMAGE_NAME` --- _Inicia um container interativo._
 - `$ docker run --name CONTAINER_NAME IMAGE_NAME` --- _Inicia um container com um nome específico._
