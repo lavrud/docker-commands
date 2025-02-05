@@ -62,6 +62,7 @@
 - `$ docker volume create VOLUME_NAME` --- _Cria um volume._
 - `$ docker volume ls` --- _Lista todos os volumes._
 - `$ docker volume rm VOLUME_NAME` --- _Remove um volume._
+- `$ docker volume rm $(docker volume ls -q)` --- _Remove todos os volumes._
 - `$ docker volume inspect VOLUME_NAME` --- _Exibe detalhes sobre um volume._
 - `$ docker volume prune` --- _Remove todos os volumes não utilizados._
 
